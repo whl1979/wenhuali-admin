@@ -1,0 +1,32 @@
+<button (click)="sortByAsccending()">正序排列</button>
+<button (click)="sortByDesccending()">倒序排列</button>
+<button (click)="sortByRadom()">随机打乱</button>
+<button (click)="deleteLast()">删除最后一个</button>
+<button (click)="saveNewUser()">新增一个</button>
+<table>
+  <tbody>
+    <tr>
+      <th>排名 </th>
+      <th>学校 </th>
+      <th>所在区 </th>
+      <th>平均分 </th>
+      <th>升学率 </th>
+      <!--<th>exam1 </th>
+      <th>exam2 </th>
+      <th>exam3 </th>-->
+    </tr>
+  </tbody>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.index}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.address}}</td>
+      <td>{{user.avgtotal}} </td>
+      <td>{{user.rate}} </td>
+      <!--<td><a target="_blank" href="http://github.com/{{user.github}}">{{user.github}}</a></td>
+      <td>{{user.exam1}}</td>
+      <td>{{user.exam2}}</td>
+      <td>{{user.exam3}}</td>-->
+    </tr>
+  </tbody>
+</table>
